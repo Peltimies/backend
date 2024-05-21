@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <p><a href="/sivu1">sivu1</a> | <a href="/sivu2">sivu2</a> | <a href="/logout">logout</a></p>
+  <h1>
+    <%= title %>
+  </h1>
+  <p>Session id on <%= sessid %>
+  </p>
+  <!--Kannasta tulee dataa tähän students-muuttujassa-->
+  <h2>Opiskelijat</h2>
+  <ul>
+    <% students.forEach(function(student) { %>
+      <li>
+        <%= student.name %> - <%= student.email %>
+            <!--Tähän toinen forEach jolla käydään läpi Grades-->
+            <ul>
+              <% student.grades.forEach(function(grade) { %>
+                <li>
+                  <%= JSON.stringify(grade) %>
+                </li>
+                <% }); %>
+            </ul>
+      </li>
+      <% }); %>
+  </ul>
+</body>
+
+</html>

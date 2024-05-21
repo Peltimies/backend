@@ -1,0 +1,32 @@
+{
+  "name": "mongo",
+  "version": "1.0.0",
+  "description": "Node-tehtäviä",
+  "keywords": [
+    "server"
+  ],
+  "author": "tuito",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "contributors": [],
+  "main": "add.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongoose": "^6.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.1",
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7"
+  }
+}
